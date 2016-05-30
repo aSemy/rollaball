@@ -7,7 +7,7 @@ public class PickupController : MonoBehaviour {
 
     public float currentSpawn = 0;
 
-    public string respawnNoiseString = "2,.250,,.1763,,.2368,.3,.4525,,.2136,,,,,,,,,,,,,,,,1,,,,,,";
+    public string respawnNoiseString = "0,.15,,.117,,.3178,.3,.155,,.128,,,,,,,,,,,.5874,,,,,1,,,,,,";
 
     public float maxScale =1;
 
@@ -44,7 +44,7 @@ public class PickupController : MonoBehaviour {
             if (currentSpawn <= 0) {
                 this.gameObject.SetActive(true);
 
-                respawnNoise.parameters.startFrequency = Random.Range(350, 650) / 1000f;
+                respawnNoise.parameters.startFrequency = Random.Range(1500, 2200) / 10000f;
                 respawnNoise.Play();
 
                 this.gameObject.transform.localScale = Vector3.zero;
